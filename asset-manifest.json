@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/health-online/static/css/main.3d7dc9eb.chunk.css",
+    "main.js": "/health-online/static/js/main.c51aa5b1.chunk.js",
+    "main.js.map": "/health-online/static/js/main.c51aa5b1.chunk.js.map",
+    "runtime-main.js": "/health-online/static/js/runtime-main.d2d8d230.js",
+    "runtime-main.js.map": "/health-online/static/js/runtime-main.d2d8d230.js.map",
+    "static/js/2.4c3f8b47.chunk.js": "/health-online/static/js/2.4c3f8b47.chunk.js",
+    "static/js/2.4c3f8b47.chunk.js.map": "/health-online/static/js/2.4c3f8b47.chunk.js.map",
+    "static/js/3.3497169e.chunk.js": "/health-online/static/js/3.3497169e.chunk.js",
+    "static/js/3.3497169e.chunk.js.map": "/health-online/static/js/3.3497169e.chunk.js.map",
+    "index.html": "/health-online/index.html",
+    "static/css/main.3d7dc9eb.chunk.css.map": "/health-online/static/css/main.3d7dc9eb.chunk.css.map",
+    "static/js/2.4c3f8b47.chunk.js.LICENSE.txt": "/health-online/static/js/2.4c3f8b47.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2d8d230.js",
+    "static/js/2.4c3f8b47.chunk.js",
+    "static/css/main.3d7dc9eb.chunk.css",
+    "static/js/main.c51aa5b1.chunk.js"
+  ]
+}
