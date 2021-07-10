@@ -1,17 +1,17 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import { makeStyles } from '@material-ui/core/styles';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import React from "react";
+import Button from "@material-ui/core/Button";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import Grow from "@material-ui/core/Grow";
+import Paper from "@material-ui/core/Paper";
+import Popper from "@material-ui/core/Popper";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuList from "@material-ui/core/MenuList";
+import { makeStyles } from "@material-ui/core/styles";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   paper: {
     marginRight: theme.spacing(2),
@@ -36,7 +36,7 @@ export default function StatusMenu() {
   };
 
   function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
+    if (event.key === "Tab") {
       event.preventDefault();
       setOpen(false);
     }
@@ -54,37 +54,78 @@ export default function StatusMenu() {
 
   return (
     <div className={classes.root}>
-      
-        <Button variant="contained"  style={{ backgroundColor: '#108E95',width:'140px', color:"white" }}
-          ref={anchorRef}
-          aria-controls={open ? 'menu-list-grow' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
-           
-        >
-          Status <ArrowDropDownIcon/>
-        </Button>
-        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-            >
-              <Paper>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList autoFocusItem={open} id="menu-list-grow"  onKeyDown={handleListKeyDown}>
-                    <MenuItem  style={{fontSize:'13px', fontFamily:'Montserrat'}} onClick={handleClose}>Accepted</MenuItem>
-                    <MenuItem style={{fontSize:'13px', fontFamily:'Montserrat'}} onClick={handleClose}>Pending</MenuItem>
-                    <MenuItem  style={{fontSize:'13px', fontFamily:'Montserrat', color:'#108E95'}}onClick={handleClose}>Processing</MenuItem>
-                    <MenuItem style={{fontSize:'13px', fontFamily:'Montserrat'}}onClick={handleClose}>Reported</MenuItem>
-                    <MenuItem style={{fontSize:'13px', fontFamily:'Montserrat'}}onClick={handleClose}>Rejected</MenuItem>
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
-      
+      <Button
+        variant="contained"
+        style={{ backgroundColor: "#108E95", width: "140px", color: "white" }}
+        ref={anchorRef}
+        aria-controls={open ? "menu-list-grow" : undefined}
+        aria-haspopup="true"
+        onClick={handleToggle}
+      >
+        Status <ArrowDropDownIcon />
+      </Button>
+      <Popper
+        open={open}
+        anchorEl={anchorRef.current}
+        role={undefined}
+        transition
+        disablePortal
+      >
+        {({ TransitionProps, placement }) => (
+          <Grow
+            {...TransitionProps}
+            style={{
+              transformOrigin:
+                placement === "bottom" ? "center top" : "center bottom",
+            }}
+          >
+            <Paper>
+              <ClickAwayListener onClickAway={handleClose}>
+                <MenuList
+                  autoFocusItem={open}
+                  id="menu-list-grow"
+                  onKeyDown={handleListKeyDown}
+                >
+                  <MenuItem
+                    style={{ fontSize: "13px", fontFamily: "Montserrat" }}
+                    onClick={handleClose}
+                  >
+                    Accepted
+                  </MenuItem>
+                  <MenuItem
+                    style={{ fontSize: "13px", fontFamily: "Montserrat" }}
+                    onClick={handleClose}
+                  >
+                    Pending
+                  </MenuItem>
+                  <MenuItem
+                    style={{
+                      fontSize: "13px",
+                      fontFamily: "Montserrat",
+                      color: "#108E95",
+                    }}
+                    onClick={handleClose}
+                  >
+                    Processing
+                  </MenuItem>
+                  <MenuItem
+                    style={{ fontSize: "13px", fontFamily: "Montserrat" }}
+                    onClick={handleClose}
+                  >
+                    Reported
+                  </MenuItem>
+                  <MenuItem
+                    style={{ fontSize: "13px", fontFamily: "Montserrat" }}
+                    onClick={handleClose}
+                  >
+                    Rejected
+                  </MenuItem>
+                </MenuList>
+              </ClickAwayListener>
+            </Paper>
+          </Grow>
+        )}
+      </Popper>
     </div>
   );
 }

@@ -1,11 +1,7 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Switch, Route, HashRouter, BrowserRouter as Router } from 'react-router-dom';
-import Home from './components/Home'
-import Error from './components/Error'
-import PermanentDrawerLeft from './components/Sidebar'
-import Bookings from './components/bookings'
- 
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { HashRouter } from "react-router-dom";
+import PermanentDrawerLeft from "./components/Sidebar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,9 +13,9 @@ function App() {
   const classes = useStyles();
   return (
     <HashRouter>
-      <PermanentDrawerLeft/>
-  </HashRouter>
+      <PermanentDrawerLeft />
+    </HashRouter>
   );
 }
 
-export default App
+export default App;
